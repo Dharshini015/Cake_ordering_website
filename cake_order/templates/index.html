@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Online cakes|Delivery</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+      body {
+          padding-top: 75px; 
+      }
+
+      .navbar {
+        background-color: rgba(185, 90, 185, 1); 
+    padding: 12px 18px;
+      }
+
+      .navbar-brand {
+          font-size: 1.7rem; 
+      }
+
+      .btn-group {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .btn-group a {
+            flex: 1;
+            margin: 0 5px;
+            background-color: rgba(185, 90, 185, 0.732);
+            color: white;
+        }
+
+        .background-image {
+            background: url("https://t3.ftcdn.net/jpg/05/97/52/02/360_F_597520226_uiJ8R378fLfEKNOaYHLgpKXOuihNaOOr.jpg") center center/cover no-repeat fixed;
+            position: relative;
+            height: 50vh; /* Adjust the height as needed */
+            opacity: 1.0; /* Adjust the opacity (0.0 to 1.0) */
+            z-index: 8; /* Ensure the background is behind other content */
+            color: white; /* Text color for the content within the background */
+            text-align: center; /* Center-align the text */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-attachment: scroll;
+        }
+        .btn-outline-success {
+        color: white;
+    }
+    .zoom-img:hover {
+    transform: scale(1.03); /* Adjust the scale factor as needed for the desired zoom level */
+    transition: transform 0.3s ease; /* Add a smooth transition effect */
+  }
+  .rounded-img {
+    border-radius: 10px; /* Adjust the border-radius as needed for the desired roundness */
+    overflow: hidden; /* Ensure the rounded corners are applied */
+  }
+  
+        .container-fluid {
+            position: relative; /* Ensure positioning context for absolute elements inside */
+            z-index: 1; /* Ensure content is above the background image */
+        }
+        .more{
+            background-color:  rgba(185, 90, 185, 0.732);
+            padding: 40px 0; 
+            overflow-x: hidden;
+            
+            
+        }
+        .more h5,p,i{
+          margin-left: 120px;
+        }
+        .more .row {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+      }
+      .more i {
+        margin-right: 10px;
+    }
+    
+        .container {
+            background-color: #fcf9f0;
+            border-radius: 10px;
+        }
+
+
+
+  </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Cakeify</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{%url 'index' %}">Home</a>
+              </li>
+              
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Taste the cakes
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="{%url 'normal_cake' %}">Normal Cakes</a></li>
+                  <li><a class="dropdown-item" href="{%url 'eggless' %}">Eggless Cakes</a></li>
+                  <li><a class="dropdown-item" href="{%url 'birth' %}">Birthday Cakes</a></li>
+                  <li><a class="dropdown-item" href="{%url 'anniversary' %}">Anniversary Cakes</a></li>
+                  <li><a class="dropdown-item" href="{%url 'design' %}">Designer Cakes</a></li>
+                  <li><a class="dropdown-item" href="{%url 'trend' %}">Trending Cakes</a></li>
+                  
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{%url 'contact' %}">Contact</a>
+              </li>
+              
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div class="background-image">
+        <div class="container-fluid">
+            <b><h1>Welcome to Cakeify!</h1></b>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <!-- Button group with adjusted spacing and larger size -->
+        <div class="btn-group">
+            <a href="{%url 'birth' %}" class="btn btn-primary btn-lg">Birthday</a>
+            <a href="{%url 'anniversary' %}" class="btn btn-primary btn-lg">Anniversary</a>
+            <a href="{%url 'design' %}" class="btn btn-primary btn-lg">Designer Cakes</a>
+            <a href="{%url 'normal_cake' %}" class="btn btn-primary btn-lg">Normal Cakes</a>
+            <a href="{%url 'eggless' %}" class="btn btn-primary btn-lg">Eggless Cakes</a>
+            <a href="{%url 'trend' %}" class="btn btn-primary btn-lg">Trending Cakes</a>
+        </div>
+      </div>
+      
+
+<hr>
+<br>
+<div class="container mt-4 occasion-container">
+  <h2>Shop by Occasion</h2><br>
+  <div class="row">
+      <div class="col-md-6">
+          <a href="{%url 'birth' %}">
+              <img src="https://images.pexels.com/photos/7100332/pexels-photo-7100332.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Birthday" class="img-fluid zoom-img rounded-img">
+          </a>
+          <p class="text-center mt-2">Birthday Cakes</p>
+      </div>
+      <div class="col-md-6">
+          <a href="{%url 'anniversary' %}">
+              <img src="https://images.pexels.com/photos/265856/pexels-photo-265856.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Anniversary" class="img-fluid zoom-img rounded-img">
+          </a>
+          <p class="text-center mt-2">Anniversary Cakes</p>
+      </div>
+  </div>
+</div>
+
+<div class="container mt-4">
+  <h2>Personalized</h2><br>
+  <div class="row">
+    <div class="col-md-2 d-flex flex-column align-items-center">
+    <a href="{%url 'photo' %}">
+      <img src="https://i.pinimg.com/564x/26/d1/52/26d152fe7b1ca22a34839be2937d65ef.jpg" alt="Flavour 1" class="img-fluid zoom-img rounded-img">
+    </a>
+      <p class="text-center mt-2">Photo Cakes</p>
+    </div>
+    <div class="col-md-2 d-flex flex-column align-items-center">
+    <a href="{%url 'passion' %}">
+      <img src="https://i.pinimg.com/564x/7a/01/5b/7a015b29d24130099781ad2951223fce.jpg" alt="Flavour 1" class="img-fluid zoom-img rounded-img">
+    </a>
+      <p class="text-center mt-2">Passion Cakes</p>
+    </div>
+    <div class="col-md-2 d-flex flex-column align-items-center">
+    <a href="{%url 'cartoon' %}">
+      <img src="https://i.pinimg.com/564x/d7/22/8f/d7228fc33abebab6f747a16b6e95c7e6.jpg" class="img-fluid zoom-img rounded-img">
+    </a>
+      <p class="text-center mt-2">Cartoons</p>
+    </div>
+    <div class="col-md-2 d-flex flex-column align-items-center">
+    <a href="{%url 'filmy' %}">
+      <img src="https://i.pinimg.com/564x/da/a0/43/daa043b0abbc73b81ba4d17cf7e87f52.jpg" alt="Flavour 1" class="img-fluid zoom-img rounded-img">
+    </a>
+      <p class="text-center mt-2">Filmy</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="container mt-4">
+  <h2>Pick a Flavour</h2><br>
+  <div class="row">
+    <div class="col-md-2 d-flex flex-column align-items-center">
+    <a href="{%url 'chocolate' %}">
+      <img src="https://images.pexels.com/photos/2067436/pexels-photo-2067436.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Flavour 1" class="img-fluid zoom-img rounded-img">
+    </a>
+      <p class="text-center mt-2">Chocolate</p>
+    </div>
+    <div class="col-md-2 d-flex flex-column align-items-center">
+    <a href="{%url 'venilla' %}">
+      <img src="https://images.pexels.com/photos/15836165/pexels-photo-15836165/free-photo-of-pink-cake-in-heart-shape.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Flavour 1" class="img-fluid zoom-img rounded-img">
+    </a>
+      <p class="text-center mt-2">Venilla</p>
+    </div>
+    <div class="col-md-2 d-flex flex-column align-items-center">
+    <a href="{%url 'black_cur' %}">
+      <img src="https://5.imimg.com/data5/JV/CG/WJ/SELLER-39577706/black-currant.jpg" alt="Flavour 1" class="img-fluid zoom-img rounded-img">
+    </a>
+      <p class="text-center mt-2">Black currant</p>
+    </div>
+    <div class="col-md-2 d-flex flex-column align-items-center">
+    <a href="{%url 'pine' %}">
+      <img src="https://www.lifeloveandsugar.com/wp-content/uploads/2022/04/Pineapple-Layer-Cake3.jpg" alt="Flavour 1" class="img-fluid zoom-img rounded-img">
+    </a>
+      <p class="text-center mt-2">Pineapple</p>
+    </div>
+    <div class="col-md-2 d-flex flex-column align-items-center">
+    <a href="{%url 'red' %}">
+      <img src="https://thebananadiaries.com/wp-content/uploads/2021/07/best-vegan-red-velvet-cake_4790.jpg" alt="Flavour 1" class="img-fluid zoom-img rounded-img">
+    </a>
+      <p class="text-center mt-2">Red Velvet</p>
+    </div>
+    <div class="col-md-2 d-flex flex-column align-items-center">
+    <a href="{%url 'blue' %}">
+      <img src="https://amycakesbakes.com/wp-content/uploads/2023/06/Blueberry-Cake-Recipe-scaled.jpg" class="img-fluid zoom-img rounded-img">
+    </a>
+      <p class="text-center mt-2">Blueberry</p>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-4">
+  <h2>Taste more</h2><br>
+  <div class="row">
+    <div class="col-md-2 d-flex flex-column align-items-center">
+      <img src="https://images.pexels.com/photos/2373520/pexels-photo-2373520.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Flavour 1" class="img-fluid zoom-img rounded-img">
+      <p class="text-center mt-2">Brownies</p>
+    </div>
+    <div class="col-md-2 d-flex flex-column align-items-center">
+      <img src="https://images.pexels.com/photos/5591726/pexels-photo-5591726.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="img-fluid zoom-img rounded-img">
+      <p class="text-center mt-2">Bread</p>
+    </div>
+    <div class="col-md-2 d-flex flex-column align-items-center">
+      <img src="https://images.pexels.com/photos/2377477/pexels-photo-2377477.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Flavour 1" class="img-fluid zoom-img rounded-img">
+      <p class="text-center mt-2">Cookies</p>
+    </div>
+    <div class="col-md-2 d-flex flex-column align-items-center">
+      <img src="https://images.pexels.com/photos/4099126/pexels-photo-4099126.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Flavour 1" class="img-fluid zoom-img rounded-img">
+      <p class="text-center mt-2">Cupcakes</p>
+    </div>
+    <div class="col-md-2 d-flex flex-column align-items-center">
+      <img src="https://i.pinimg.com/236x/0c/71/e2/0c71e2e58ead2a9769a68e363fce8188.jpg" alt="Flavour 1" class="img-fluid zoom-img rounded-img">
+      <p class="text-center mt-2">Pastries</p>
+    </div>
+    <div class="col-md-2 d-flex flex-column align-items-center">
+      <img src="https://images.pexels.com/photos/3338677/pexels-photo-3338677.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="img-fluid zoom-img rounded-img">
+      <p class="text-center mt-2">Donuts</p>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<section class="more">
+   
+  <div class="row">
+      <div class="col-sm-6 col-lg-4 mb-3">
+          <i class="fa-solid fa-plane"></i>
+          <h5>World Wide Delivery</h5>
+          <p class="text-muted">We deliver gifts to 100+ countries</p>
+      </div>
+      <div class="col-sm-6 col-lg-4 mb-3">
+          <i class="fa-solid fa-lock"></i>
+          <h5>100% Safe & Secure Payments</h5>
+          <p class="text-muted">Pay using secure payment methods</p>
+      </div>
+      <div class="col-sm-6 col-lg-4 mb-3">
+          <i class="fa-solid fa-phone-volume"></i>
+                 
+          </i>
+              <h5>Dedicated Help Center</h5>
+              <p class="text-muted">Call us +91 93534440543</p>
+      </div>
+</div>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
